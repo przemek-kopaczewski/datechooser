@@ -1,3 +1,9 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def index(request):
+    return render(request, 'datechooser/base.html')
+
+
+def create_event(request):
+    return render(request, 'datechooser/create_event.html')

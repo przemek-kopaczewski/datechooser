@@ -2,3 +2,5 @@
 .env
 db.sqlite3
 venv/
+datechooser/__pycache__/
+polls/__pycache__/
