@@ -2,4 +2,26 @@
 {% block title %}Tworzenie wydarzenia{% endblock %}
 {% block header %} Uzupełnij formularz, żeby stworzyć wydarzenie {% endblock %}
 {% block main %}
+<form class="col-lg-6 offset-lg-3 ">
+  <div class="row justify-content-center">
+    <div class="form-group">
+      <input class="form-control" name="title" placeholder="Nazwa wydarzenia"/>
+    </div>
+    <div class="form-group">
+      <textarea class="form-control mt-2 mb-2" rows="3" name="description" placeholder="Opis"></textarea>
+    </div>
+    <div class="container">
+	  <input type="text" class="form-control date" name="dates" placeholder="Wybierz daty"/>
+    </div>
+  </div>
+  <button type="submit" class="btn btn-primary mt-2">Wyślij</button>
+</form>
+{% endblock %}
+{% block js %}
+<script>
+$('.date').datepicker({
+    multidate: true,
+    format: 'dd-mm-yyyy'
+});
+</script>
 {% endblock %}
